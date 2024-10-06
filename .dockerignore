@@ -1,0 +1,6 @@
+# Exclude everything
+**
+
+# App whitelist
+!requirements.txt
+!src/

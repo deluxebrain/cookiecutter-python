@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cookiecutter-python"
+version = "0.0.0"
+readme = "README.md"
+requires-python = ">=3.12.0,<3.13.0"
+dependencies = ["python-dotenv==1.0.1"]
+
+[project.optional-dependencies]
+dev = [
+  "build",
+  "pip-tools",
+  "autoflake",
+  "flake8",
+  "black",
+  "isort",
+  "bandit",
+  "mypy",
+  "pylint"
+]
+
+[project.scripts]
+hello-world = "app.main:main"
+
+[tool.bandit]
+exclude_dirs = ["venv"]
+
+[tool.black]
+line-length = 80
+exclude = '''
+/(
+    |   \.git
+    |   \.mypy_cache
+    |   \.tox
+    |   venv
+    |   .venv
+    |   _build
+    |   build
+    |   dist
+)/
+'''
+
+[tool.isort]
+import_heading_firstparty = "Library"
+import_heading_future = "Futures"
+import_heading_local = "Local"
+import_heading_stdlib = "Standard Library"
+import_heading_thirdparty = "Third Party"
+indent = 4
+known_first_party = "app"
+lines_after_imports = 2
+lines_between_types = 1
+profile = "black"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+annotated_tag = true
+tag_format = "$version"
+update_changelog_on_bump = true
+version_files = ["Makefile:VERSION", "package.json:version"]
+version_scheme = "pep440"
+version_provider = "pep621"
+major_version_zero = true
