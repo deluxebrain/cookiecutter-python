@@ -25,5 +25,14 @@
     }
   },
   "isort.args": ["--settings-file", "pyproject.toml"],
-  "cSpell.words": ["commitizen", "cookiecutter", "PYTHONUNBUFFERED"]
+  "cSpell.words": [
+    "commitizen",
+    "cookiecutter",
+    "direnv",
+    "envrc",
+    "isort",
+    "PYTHONUNBUFFERED",
+    "venv"
+  ],
+  "makefile.configureOnOpen": false
 }
