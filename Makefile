@@ -1,5 +1,5 @@
 PROJECT := cookiecutter-python
-VERSION := 0.4.0
+VERSION := 0.4.1
 ROOT_DIR := $(shell git rev-parse --show-toplevel)
 MAKEFILE_DIR := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
 
