@@ -4,7 +4,9 @@
   "files.associations": {
     ".envrc": "shellscript",
     ".env": "shellscript",
-    "*.example": "plaintext"
+    "*.example": "plaintext",
+    "**/prompts/**/*.json": "plaintext",
+    "**/charts/**/*.yaml": "plaintext"
   },
   "files.exclude": {
     "Brewfile.lock.json": true,
@@ -32,6 +34,7 @@
     "envrc",
     "isort",
     "PYTHONUNBUFFERED",
+    "shellcheck",
     "venv"
   ],
   "makefile.configureOnOpen": false
